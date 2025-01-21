@@ -39,10 +39,10 @@ import uk.org.openbanking.datamodel.v4.common.OBUltimateDebtor1;
  * The Initiation payload is sent by the initiating party to the ASPSP. It is used to request movement of funds using a payment file.
  */
 
-@Schema(name = "OBWriteFile2_Data_Initiation", description = "The Initiation payload is sent by the initiating party to the ASPSP. It is used to request movement of funds using a payment file.")
-@JsonTypeName("OBWriteFile2_Data_Initiation")
+@Schema(name = "OBWriteFileResponse3_Data_Initiation", description = "The Initiation payload is sent by the initiating party to the ASPSP. It is used to request movement of funds using a payment file.")
+@JsonTypeName("OBWriteFileResponse3_Data_Initiation")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
-public class OBWriteFile2DataInitiation {
+public class OBWriteFileResponse3DataInitiation {
 
     private String fileType;
 
@@ -59,9 +59,9 @@ public class OBWriteFile2DataInitiation {
 
     private String localInstrument;
 
-    private OBWriteDomestic2DataInitiationCreditorAgent creditorAgent;
-
     private OBWriteDomestic2DataInitiationDebtorAccount debtorAccount;
+
+    private OBWriteDomestic2DataInitiationCreditorAgent creditorAgent;
 
     private OBUltimateDebtor1 ultimateDebtor;
 
@@ -69,19 +69,19 @@ public class OBWriteFile2DataInitiation {
 
     private OBSupplementaryData1 supplementaryData;
 
-    public OBWriteFile2DataInitiation() {
+    public OBWriteFileResponse3DataInitiation() {
         super();
     }
 
     /**
      * Constructor with only required parameters
      */
-    public OBWriteFile2DataInitiation(String fileType, String fileHash) {
+    public OBWriteFileResponse3DataInitiation(String fileType, String fileHash) {
         this.fileType = fileType;
         this.fileHash = fileHash;
     }
 
-    public OBWriteFile2DataInitiation fileType(String fileType) {
+    public OBWriteFileResponse3DataInitiation fileType(String fileType) {
         this.fileType = fileType;
         return this;
     }
@@ -102,7 +102,7 @@ public class OBWriteFile2DataInitiation {
         this.fileType = fileType;
     }
 
-    public OBWriteFile2DataInitiation fileHash(String fileHash) {
+    public OBWriteFileResponse3DataInitiation fileHash(String fileHash) {
         this.fileHash = fileHash;
         return this;
     }
@@ -124,7 +124,7 @@ public class OBWriteFile2DataInitiation {
         this.fileHash = fileHash;
     }
 
-    public OBWriteFile2DataInitiation fileReference(String fileReference) {
+    public OBWriteFileResponse3DataInitiation fileReference(String fileReference) {
         this.fileReference = fileReference;
         return this;
     }
@@ -145,7 +145,7 @@ public class OBWriteFile2DataInitiation {
         this.fileReference = fileReference;
     }
 
-    public OBWriteFile2DataInitiation numberOfTransactions(String numberOfTransactions) {
+    public OBWriteFileResponse3DataInitiation numberOfTransactions(String numberOfTransactions) {
         this.numberOfTransactions = numberOfTransactions;
         return this;
     }
@@ -166,7 +166,7 @@ public class OBWriteFile2DataInitiation {
         this.numberOfTransactions = numberOfTransactions;
     }
 
-    public OBWriteFile2DataInitiation controlSum(BigDecimal controlSum) {
+    public OBWriteFileResponse3DataInitiation controlSum(BigDecimal controlSum) {
         this.controlSum = controlSum;
         return this;
     }
@@ -187,7 +187,7 @@ public class OBWriteFile2DataInitiation {
         this.controlSum = controlSum;
     }
 
-    public OBWriteFile2DataInitiation requestedExecutionDateTime(DateTime requestedExecutionDateTime) {
+    public OBWriteFileResponse3DataInitiation requestedExecutionDateTime(DateTime requestedExecutionDateTime) {
         this.requestedExecutionDateTime = requestedExecutionDateTime;
         return this;
     }
@@ -208,7 +208,7 @@ public class OBWriteFile2DataInitiation {
         this.requestedExecutionDateTime = requestedExecutionDateTime;
     }
 
-    public OBWriteFile2DataInitiation localInstrument(String localInstrument) {
+    public OBWriteFileResponse3DataInitiation localInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
     }
@@ -229,28 +229,7 @@ public class OBWriteFile2DataInitiation {
         this.localInstrument = localInstrument;
     }
 
-    public OBWriteFile2DataInitiation creditorAgent(OBWriteDomestic2DataInitiationCreditorAgent creditorAgent) {
-        this.creditorAgent = creditorAgent;
-        return this;
-    }
-
-    /**
-     * Get creditorAgent
-     *
-     * @return creditorAgent
-     */
-    @Valid
-    @Schema(name = "CreditorAgent", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-    @JsonProperty("CreditorAgent")
-    public OBWriteDomestic2DataInitiationCreditorAgent getCreditorAgent() {
-        return creditorAgent;
-    }
-
-    public void setCreditorAgent(OBWriteDomestic2DataInitiationCreditorAgent creditorAgent) {
-        this.creditorAgent = creditorAgent;
-    }
-
-    public OBWriteFile2DataInitiation debtorAccount(OBWriteDomestic2DataInitiationDebtorAccount debtorAccount) {
+    public OBWriteFileResponse3DataInitiation debtorAccount(OBWriteDomestic2DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
     }
@@ -271,7 +250,28 @@ public class OBWriteFile2DataInitiation {
         this.debtorAccount = debtorAccount;
     }
 
-    public OBWriteFile2DataInitiation ultimateDebtor(OBUltimateDebtor1 ultimateDebtor) {
+    public OBWriteFileResponse3DataInitiation creditorAgent(OBWriteDomestic2DataInitiationCreditorAgent creditorAgent) {
+        this.creditorAgent = creditorAgent;
+        return this;
+    }
+
+    /**
+     * Get creditorAgent
+     *
+     * @return creditorAgent
+     */
+    @Valid
+    @Schema(name = "CreditorAgent", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    @JsonProperty("CreditorAgent")
+    public OBWriteDomestic2DataInitiationCreditorAgent getCreditorAgent() {
+        return creditorAgent;
+    }
+
+    public void setCreditorAgent(OBWriteDomestic2DataInitiationCreditorAgent creditorAgent) {
+        this.creditorAgent = creditorAgent;
+    }
+
+    public OBWriteFileResponse3DataInitiation ultimateDebtor(OBUltimateDebtor1 ultimateDebtor) {
         this.ultimateDebtor = ultimateDebtor;
         return this;
     }
@@ -292,7 +292,7 @@ public class OBWriteFile2DataInitiation {
         this.ultimateDebtor = ultimateDebtor;
     }
 
-    public OBWriteFile2DataInitiation remittanceInformation(OBRemittanceInformation2 remittanceInformation) {
+    public OBWriteFileResponse3DataInitiation remittanceInformation(OBRemittanceInformation2 remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
     }
@@ -313,7 +313,7 @@ public class OBWriteFile2DataInitiation {
         this.remittanceInformation = remittanceInformation;
     }
 
-    public OBWriteFile2DataInitiation supplementaryData(OBSupplementaryData1 supplementaryData) {
+    public OBWriteFileResponse3DataInitiation supplementaryData(OBSupplementaryData1 supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
@@ -342,30 +342,30 @@ public class OBWriteFile2DataInitiation {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        OBWriteFile2DataInitiation obWriteFile2DataInitiation = (OBWriteFile2DataInitiation) o;
-        return Objects.equals(this.fileType, obWriteFile2DataInitiation.fileType) &&
-                Objects.equals(this.fileHash, obWriteFile2DataInitiation.fileHash) &&
-                Objects.equals(this.fileReference, obWriteFile2DataInitiation.fileReference) &&
-                Objects.equals(this.numberOfTransactions, obWriteFile2DataInitiation.numberOfTransactions) &&
-                isEqual(this.controlSum, obWriteFile2DataInitiation.controlSum) &&
-                Objects.equals(this.requestedExecutionDateTime, obWriteFile2DataInitiation.requestedExecutionDateTime) &&
-                Objects.equals(this.localInstrument, obWriteFile2DataInitiation.localInstrument) &&
-                Objects.equals(this.creditorAgent, obWriteFile2DataInitiation.creditorAgent) &&
-                Objects.equals(this.debtorAccount, obWriteFile2DataInitiation.debtorAccount) &&
-                Objects.equals(this.ultimateDebtor, obWriteFile2DataInitiation.ultimateDebtor) &&
-                Objects.equals(this.remittanceInformation, obWriteFile2DataInitiation.remittanceInformation) &&
-                Objects.equals(this.supplementaryData, obWriteFile2DataInitiation.supplementaryData);
+        OBWriteFileResponse3DataInitiation obWriteFileResponse3DataInitiation = (OBWriteFileResponse3DataInitiation) o;
+        return Objects.equals(this.fileType, obWriteFileResponse3DataInitiation.fileType) &&
+                Objects.equals(this.fileHash, obWriteFileResponse3DataInitiation.fileHash) &&
+                Objects.equals(this.fileReference, obWriteFileResponse3DataInitiation.fileReference) &&
+                Objects.equals(this.numberOfTransactions, obWriteFileResponse3DataInitiation.numberOfTransactions) &&
+                isEqual(this.controlSum, obWriteFileResponse3DataInitiation.controlSum) &&
+                Objects.equals(this.requestedExecutionDateTime, obWriteFileResponse3DataInitiation.requestedExecutionDateTime) &&
+                Objects.equals(this.localInstrument, obWriteFileResponse3DataInitiation.localInstrument) &&
+                Objects.equals(this.debtorAccount, obWriteFileResponse3DataInitiation.debtorAccount) &&
+                Objects.equals(this.creditorAgent, obWriteFileResponse3DataInitiation.creditorAgent) &&
+                Objects.equals(this.ultimateDebtor, obWriteFileResponse3DataInitiation.ultimateDebtor) &&
+                Objects.equals(this.remittanceInformation, obWriteFileResponse3DataInitiation.remittanceInformation) &&
+                Objects.equals(this.supplementaryData, obWriteFileResponse3DataInitiation.supplementaryData);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(fileType, fileHash, fileReference, numberOfTransactions, controlSum, requestedExecutionDateTime, localInstrument, creditorAgent, debtorAccount, ultimateDebtor, remittanceInformation, supplementaryData);
+        return Objects.hash(fileType, fileHash, fileReference, numberOfTransactions, controlSum, requestedExecutionDateTime, localInstrument, debtorAccount, creditorAgent, ultimateDebtor, remittanceInformation, supplementaryData);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class OBWriteFile2DataInitiation {\n");
+        sb.append("class OBWriteFileResponse3DataInitiation {\n");
         sb.append("    fileType: ").append(toIndentedString(fileType)).append("\n");
         sb.append("    fileHash: ").append(toIndentedString(fileHash)).append("\n");
         sb.append("    fileReference: ").append(toIndentedString(fileReference)).append("\n");
@@ -373,8 +373,8 @@ public class OBWriteFile2DataInitiation {
         sb.append("    controlSum: ").append(toIndentedString(controlSum)).append("\n");
         sb.append("    requestedExecutionDateTime: ").append(toIndentedString(requestedExecutionDateTime)).append("\n");
         sb.append("    localInstrument: ").append(toIndentedString(localInstrument)).append("\n");
-        sb.append("    creditorAgent: ").append(toIndentedString(creditorAgent)).append("\n");
         sb.append("    debtorAccount: ").append(toIndentedString(debtorAccount)).append("\n");
+        sb.append("    creditorAgent: ").append(toIndentedString(creditorAgent)).append("\n");
         sb.append("    ultimateDebtor: ").append(toIndentedString(ultimateDebtor)).append("\n");
         sb.append("    remittanceInformation: ").append(toIndentedString(remittanceInformation)).append("\n");
         sb.append("    supplementaryData: ").append(toIndentedString(supplementaryData)).append("\n");
